@@ -31,7 +31,7 @@ body{
     color: black; 
 }
 
-.container form #input-field{
+.container form .input-field{
     width: 100%;
     height: 40px;
     background-color: white;
