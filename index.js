@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const collegeName = document.getElementById('collegeName');
     const appRound = document.getElementById('appRound');
     const appPlan = document.getElementById('appPlan');
+    const ivyLeague = ['Harvard', 'Yale', 'Princeton', 'Columbia', 'Dartmouth', 'Brown', 'Cornell', 'Upenn']
   
     const cover = document.getElementById('cover');
     const addedColleges = new Set();
@@ -20,9 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
       let plan = appPlan.value;
       console.log(plan);
 
+      if(ivyLeague.includes(college)===false){
+        return alert('Enter an Ivy League Institution!');
+      }
+
       if (addedColleges.has(college)) {
-        alert('This college has already been added to the list.');
-        return;
+        return alert('This college has already been added to the list.');
       }
   
       fetch(`http://localhost:3000/${college}`)
@@ -37,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>${data[0].name}</h2>
                 <h3>${data[0].location}</h3>
                 <p>Acceptance Rate: ${data[0].acceptanceRate}%</p>
-                <a href=${data[0].weblink}>Click to see website</a>
+                <a href=${data[0].weblink} target='-blank'>Click to see website</a>
                 <p>I intend to apply: ${round}</p>
                 <p>Application Plan: ${plan}</p>
                 <button type='button' class='Btn'>Delete College</button>
@@ -50,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch((error) => {
           alert(error);
         });
+        form.reset();
     }
   
     function handleRemove(event) {
