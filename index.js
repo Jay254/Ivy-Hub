@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const appPlan = document.getElementById('appPlan');
     const cover = document.getElementById('cover');
 
-    const addedColleges = new Set();  //keeps track of colleges already in our college list
+    const addedColleges = new Set();  //keeps track of colleges already displayed on our college list
     //an array containing names of all the Ivy league colleges in the US
     const ivyLeague = ['Harvard', 'Yale', 'Princeton', 'Columbia', 'Dartmouth', 'Brown', 'Cornell', 'Upenn']
   
@@ -36,12 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return alert('This college has already been added to the list.');
       }
   
-      //fetch request to display the user's input college on our DOM
+      //fetch request to our json server to display the user's input college on our DOM
       fetch(`http://localhost:3000/${college}`)
-        .then(res => res.json())
-        .then(data => {
+        .then(res => res.json())//our fetch request returns a promise which is resolved with the response from the server; its converted from JSON to plain old javascript object
+        .then(data => {//our fetched data(college info in this case)
           console.log(data[0].name);
   
+          //creating college card list by adding html code to our cover body; substituting our fetched and input data at relevant points
           cover.innerHTML += `
             <div class="box">
               <img src="${data[0].img}" alt="${college}">
@@ -56,13 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
           `;
-          addedColleges.add(college);
+          addedColleges.add(college);//adding our fetched college to our 'addedColleges' set
           console.log(cover);
         })
         .catch((error) => {
-          alert(error);
+          alert(error); //alerts the error message to our user in case a failure occurs during the fetching process
         });
-        form.reset();
+        form.reset();//restores a form element's default values
     }
   
     function handleRemove(event) {
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const box = event.target.closest('.box');
         box.remove();
 
+        //removes our deleted college from our 'addedColleges' set 
         const college = box.querySelector('img').alt;
         addedColleges.delete(college);
       }
