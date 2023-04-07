@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>${data[0].name}</h2>
                 <h3>${data[0].location}</h3>
                 <p>Acceptance Rate: ${data[0].acceptanceRate}%</p>
-                <a href=${data[0].weblink} target='-blank'>Click to see website</a>
+                <a href=${data[0].weblink} target='-blank'>Visit ${college}'s Website</a>
                 <p>I intend to apply: ${round}</p>
                 <p>Application Plan: ${plan}</p>
                 <button type='button' class='Btn'>Delete College</button>
