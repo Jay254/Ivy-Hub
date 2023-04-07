@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const appPlan = document.getElementById('appPlan');
   
     const cover = document.getElementById('cover');
+    const addedColleges = new Set();
   
     form.addEventListener('submit', handleSubmit);
   
@@ -18,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(round);
       let plan = appPlan.value;
       console.log(plan);
+
+      if (addedColleges.has(college)) {
+        alert('This college has already been added to the list.');
+        return;
+      }
   
       fetch(`http://localhost:3000/${college}`)
         .then(res => res.json())
@@ -34,10 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href=${data[0].weblink}>Click to see website</a>
                 <p>I intend to apply: ${round}</p>
                 <p>Application Plan: ${plan}</p>
-                <button type='button' class='Btn'>Remove From List</button>
+                <button type='button' class='Btn'>Delete College</button>
               </div>
             </div>
           `;
+          addedColleges.add(college);
           console.log(cover);
         })
         .catch((error) => {
@@ -49,6 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (event.target.classList.contains('Btn')) {
         const box = event.target.closest('.box');
         box.remove();
+
+        const college = box.querySelector('img').alt;
+        addedColleges.delete(college);
       }
     }
   });
