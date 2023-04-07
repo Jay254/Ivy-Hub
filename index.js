@@ -41,11 +41,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 </div>
         </div>
         `
-        
     }
-    
-    
-    
     )
     .catch( (error) => {
         alert(error);
@@ -54,5 +50,9 @@ document.addEventListener('DOMContentLoaded', () =>{
     form.reset();
     
    }
+
+   
+
+
 
 })
