@@ -6,6 +6,7 @@
 
 #h1{
     text-align: center;
+    color: white;
 }
 body{
     background-color: aliceblue;
@@ -84,7 +85,7 @@ img{
     height: 250px;
 }
 
-#Btn{
+.Btn{
     width: 120px;
     height: 34px;
     background: green;
@@ -95,6 +96,6 @@ img{
     color: white;
     border-radius: 4px;
 }
-#Btn:hover{
+.Btn:hover{
     opacity: .7;
 }
