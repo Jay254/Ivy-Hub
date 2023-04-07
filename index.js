@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () =>{
     let plan = appPlan.value
     console.log(plan)
 
+    let Ivy = ['Harvard', 'Yale', 'Princeton', 'Columbia', 'Dartmouth', 'Brown', 'Upenn', 'Cornell'];
+
+    if(Ivy.includes(college)===false){
+        return alert('Enter a Valid Ivy League name');
+    }
+
     fetch(`http://localhost:3000/${college}`)
     .then( res => res.json())
     .then(data => {
@@ -41,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     }
     )
     .catch( (error) => {
-        alert(error);
+        console.log(error);
     })
    }
 
