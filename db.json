@@ -2,9 +2,82 @@
     "Harvard": [
         {
             "id": 1,
-            "location": "Cambridge, Massachussets",
-            "Acceptance Rate": "4%",
+            "name": "Harvard University",
+            "location": "Cambridge, Massachusetts",
+            "acceptanceRate": "5",
+            "weblink": "https://www.harvard.edu",
             "img": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2022-07/220722-harvard-campus-ac-555p-4c79ac.jpg"
         }
+    ],
+    "Princeton": [
+        {
+            "id": 1,
+            "name": "Princeton University",
+            "location": "Princeton, New Jersey",
+            "acceptanceRate": "6",
+            "weblink": "https://www.princeton.edu",
+            "img": "https://paw.princeton.edu/sites/default/files/styles/feature_image/public/images/content/20210425_CL_QH_0116_0.jpg?itok=mvq8cGSe"
+        }
+    ],
+    "Yale": [
+        {
+            "id": 1,
+            "name": "Yale University",
+            "location": "New Haven, Connecticut",
+            "acceptanceRate": "7",
+            "weblink": "https://www.yale.edu",
+            "img": "https://admissions.yale.edu/sites/default/files/styles/flexslider_full/public/2010_05_10_19_03_37_central_campus_1.jpg?itok=1hVNjje6"
+        }
+    ],
+    "Brown": [
+        {
+            "id": 1,
+            "name": "Brown University",
+            "location": "Providence, Rhode Island",
+            "acceptanceRate": "8",
+            "weblink": "https://www.brown.edu",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ0W9Y7JQzHlXGKr66GvLyzfknYEwwi2ja5Q&usqp=CAU"
+        }
+    ],
+    "Dartmouth": [
+        {
+            "id": 1,
+            "name": "Dartmouth University",
+            "location": "Hanover, New Hampshire",
+            "acceptanceRate": "9",
+            "weblink": "https://home.dartmouth.edu",
+            "img": "https://home.dartmouth.edu/sites/home/files/styles/3_2_lg/public/2021-10/20191021_drone_fall_0127.jpg"
+        }
+    ],
+    "Upenn": [
+        {
+            "id": 1,
+            "name": "University of Pennsylvania",
+            "location": "Philadelphia, Pennsylvania",
+            "acceptanceRate": "9",
+            "weblink": "https://www.upenn.edu",
+            "img": "http://www.arbnet.org/sites/arbnet/files/styles/individual_arboretum_main/public/Penn_Aerial%20crop%20w%20logo.jpg?itok=hX9hsGcq"
+        }
+    ],
+    "Columbia": [
+        {
+            "id": 1,
+            "name": "Columbia University in the City of New York",
+            "location": "New York, New York",
+            "acceptanceRate": "7",
+            "weblink": "https://www.columbia.edu",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReOVu7--YxbnVxSGOnm7AurS4wbEOYSM_CCw&usqp=CAU"
+        }
+    ],
+    "Cornell": [
+        {
+            "id": 1,
+            "name": "Cornell University",
+            "location": "Ithaca, New York",
+            "acceptanceRate": "11",
+            "weblink": "https://www.cornell.edu",
+            "img": "https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_334,q_75,w_579/https://assets.simpleviewinc.com/simpleview/image/upload/crm/newyorkstate/cornell-university-campus0_b1cf9b24-9307-fac2-4b7a6f0cab21dc53.jpg"
+        }
     ]
+    
 }

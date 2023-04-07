@@ -56,7 +56,7 @@ body{
     opacity: .7;
 }
 
-.cover{
+#cover{
     width: 100%;
     height:100%;
     margin-top: 40px;
