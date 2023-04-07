@@ -37,12 +37,16 @@ document.addEventListener('DOMContentLoaded', () =>{
                     <a href=${data[0].weblink}>Click to see website</a>
                     <p>I intend to apply: ${appRound.value}</p>
                     <p>Application Plan: ${appPlan.value}</p>
-        
+                    <button type='button' id='Btn'>Remove From List</button>
                 </div>
         </div>
         `
         
-    })
+    }
+    
+    
+    
+    )
     .catch( (error) => {
         alert(error);
     })
