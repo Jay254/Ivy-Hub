@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         console.log(data[0].name)
         
         cover.innerHTML +=`
+        
         <div class="box">
                 <img src="${data[0].img}" alt="${college}">
                 <div id="description">
@@ -42,13 +43,19 @@ document.addEventListener('DOMContentLoaded', () =>{
                     <button type='click' id='${college}' class='Btn'>Remove From List</button>
                 </div>
         </div>
+        
         `
-
+        document.getElementById(college).addEventListener('click', handleDelete)
+        function handleDelete(event) {
+            event.target.parentNode.parentNode.remove();
+        }
+        
     }
     )
     .catch( (error) => {
         console.log(error);
     })
    }
-
+    
+   
 })
