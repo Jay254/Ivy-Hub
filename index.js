@@ -66,14 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();//restores a form element's default values
     }
   
-    function handleRemove(event) {
+    function handleRemove(event) {//called when the 'Delete College' button is clicked
       if (event.target.classList.contains('Btn')) {
         const box = event.target.closest('.box');
-        box.remove();
+        box.remove();//removes the closest parent element with a class of box
 
-        //removes our deleted college from our 'addedColleges' set 
-        const college = box.querySelector('img').alt;
-        addedColleges.delete(college);
+        
+        const college = box.querySelector('img').alt;//college name is retrieved from the removed element's image alt attribute
+        addedColleges.delete(college); //removes our deleted college from our 'addedColleges' set 
       }
     }
   });
